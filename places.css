@@ -1,0 +1,72 @@
+header {
+  position: static;
+}
+body {
+  background: linear-gradient(30deg, rgb(46, 46, 46), rgb(77, 77, 77));
+}
+main ul {
+  list-style: none; /* as the name suggests used to remove the default styling of the list*/
+  width: 1200px;
+  margin: 0px auto 30px auto;
+  padding: 0px;
+  display: grid; /* used to make the grid of the list Items*/
+
+  /* grid-template-columns: 500px 500px;  */
+  /* need to define the size (in px)of the single grid and define size(in px) every single time to make a coulomns as required. 
+
+  also we can use fraction "fr" unit to divide the couloms as per requirement*/
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  /*in the first value we are defining the space between the rows and in the second defining Coulmns */
+}
+main li {
+  /* width: auto; */
+  display: flex;
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /*( A B C D) Where A is the size of TOP and BOTTOM shadow, B is the size of LEFT and RIGHT, C is the size of the thowing shadow and D is the color of the shadow along with the opacity */
+  border-radius: 15px;
+  overflow: hidden; /* overfolw: Visible is by default. however to make the border radious work with images we should always use overflow: hidden;*/
+  /* margin: 0px 10px 20px 10px; */
+}
+main li img {
+  width: 300px;
+  height: 280px;
+  object-fit: cover; /*Property used to fit the image in the given box size and make sure that the image does not squeeze*/
+}
+.item-content {
+  padding: 20px;
+  display: inline-grid;
+}
+h2 {
+  margin: 0px;
+}
+
+/* used all these properties to position the "Explore" anchor tag*/
+.actions {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+.actions a {
+  font-weight: bolder;
+  padding: 7px 11px;
+  color: rgb(82, 239, 239);
+  border-radius: 6px;
+}
+.actions a:hover {
+  background-color: rgb(212, 246, 246);
+}
+/* we can also use (A /span B), where A is the grid number from we want to start the list item and span B is the (1-grid no.) to deine the grids it shoud occupy.*/
+li:nth-of-type(3){
+grid-column: 1/3; /* used so that the list iem can be made to use the space required from the grid number. A/B, where A is the number from where we want the list item to start and is the number till the number we want to strech.*/
+}
+#page-logo a{
+  color: rgb(183, 230, 235);
+}
+nav li a{
+  color: rgb(183, 230, 235);
+}
+nav a:hover{
+  background-color:rgb(183, 230, 235) ;
+  color: rgb(59, 59, 59);
+}
